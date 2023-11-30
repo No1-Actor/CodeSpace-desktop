@@ -28,7 +28,7 @@
     5XX    服务端错误
     HTTP 基于请求响应的简单协议
         请求行  POST + url   短小
-        头部    key=val  Authorization=api-key
+        请求头    key=val  Authorization=api-key
         请求体  
 
         model davince 请求者  400 Bad Request

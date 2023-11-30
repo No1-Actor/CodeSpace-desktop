@@ -14,3 +14,4 @@
 5. 返回由 "[object" 和 class 和 "]" 三部分组成的字符串
    
 # Array.isArray(arr)
+1. 用于检查一个值是否为数组的方法

@@ -14,11 +14,11 @@ let map = new Map([
 let obj = {a:1}
 map.set(obj, 'hello')
 
-// console.log(map(obj));  // map is not a function  obj地址值和对象中地址值不一样
+//  console.log(map(obj));  // map is not a function  obj地址值和对象中地址值不一样
 
-// map.forEach((value, key, map) => {
-//     console.log(value, key, map);
-// })
+map.forEach((value, key, map) => {
+    console.log(value, key, map);
+})
 
 console.log([...map]);
 // ----------------------------------------------

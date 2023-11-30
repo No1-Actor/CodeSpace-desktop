@@ -1,11 +1,9 @@
 // 闭包
 function a() {
     function b() {
-        var bbb = 234
-        console.log(aaa); // 123 
+        console.log(aaa); 
     }
     var aaa = 123
     return b
 }
-
-a()
+console.log(a()());

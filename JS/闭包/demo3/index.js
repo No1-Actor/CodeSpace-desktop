@@ -9,4 +9,4 @@ function foo() {
 }
 
 var myName = '君'
-foo()
+console.log(foo());

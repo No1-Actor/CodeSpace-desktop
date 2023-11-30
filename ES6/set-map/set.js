@@ -7,7 +7,7 @@
 
 // let set = new Set([1, 2, 3, 4])
 // set.add(5)
-// console.log(set[0]);
+// console.log(set);
 
 // ---------------------------------------------
 // 数组去重
@@ -15,10 +15,11 @@
 
 // function unique(arr) {
 //     let s = new Set(arr)
-//     let res = Array.from(s)
+//     let res = Array.from(s) // Array.from() 方法从一个类数组或可迭代对象创建一个新的数组。。
 //     return res
-    // return Arrayr.from(new Set(arr))
+//     return Array.from(new Set(arr))
 // }
+// console.log(unique(arr));
 
 // ---------------------------------------------
 // var unique = (arr) => [...new Set(arr)]
@@ -33,4 +34,9 @@
 //     console.log(item, index, set);
 // })
 
-// ---------------------------------------------
+const numbers = [1, 2, 3, 4, 5];
+const doubledNumbers = numbers.map(function(num) {
+  return num * 2;
+});
+
+console.log(doubledNumbers); // 输出: [2, 4, 6, 8, 10]

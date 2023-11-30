@@ -6,7 +6,7 @@ let und = undefined // undefined
 let nu = null // null
 
 let big = 123n // big number
-let s = Symbol('hello') // symbol
+let sym = Symbol('hello') // symbol
 
 // 引用类型
 let obj = {}
@@ -21,7 +21,7 @@ console.log(typeof flag); // boolean
 console.log(typeof undefined); //undefined
 console.log(typeof null); // object Bug
 console.log(typeof big); // bigint
-console.log(typeof s); // symbol
+console.log(typeof sym); // symbol
 
 console.log(typeof obj); // object
 console.log(typeof arr); // object 
