@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+</body>
+<script>
+    const app = Vue.createApp({
+        data(){
+            return{
+                list:[],
+                value:""
+            }
+        },
+        methods:{
+            add(){
+                this.list.push(this.value)
+                this.value=""
+            }
+        },
+        template:`
+        <div>
+            <my-title></my-title>
+            <input v-model="value" />
+            <button @click="add">增加佳丽</button>
+            <ul>
+                <my-jiali
+                    v-for="(item,index) of list"
+                    v-bind:item="item"
+                    v-bind:index="index"
+                />
+            </ul>
+        </div>
+        `
+        
+        })
+        app.component('my-title',{
+            template: `<h1 style="text-align:center">洗脚城</h1>`
+            
+        })
+        app.component('my-jiali',{
+            props: ['index','item'],
+            template: `<li>[{{index}}]-{{item}}</li>`
+        })
+        app.mount('#app')
+    
+</script>
+</html>

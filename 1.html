@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+</body>
+<script>
+    Vue.createApp({
+        data(){
+            return{
+                list:['小明','小红','小花'],
+                value:""
+            }
+        },
+        methods:{
+            add(){
+                this.list.push(this.value)
+                this.value=""
+            }
+        },
+        template:`
+        <div>
+            <input v-model="value" />
+            <button @click="add">增加佳丽</button>
+            <ul>
+                <li v-for="(item,index) of list">[{{index}}]{{item}}</li>
+            </ul>
+        </div>
+        `
+        
+        }).mount('#app')
+    
+</script>
+</html>
