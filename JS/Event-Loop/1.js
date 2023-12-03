@@ -1,8 +1,10 @@
-let a = 1
+// 宏任务
+let a = 2
 console.log(a);
 
 setTimeout(() => { 
-    console.log(a);
-}, 1000);
+    console.log(1);
+}, 0);
 
-let b =2
+let b = 3
+console.log(b);
