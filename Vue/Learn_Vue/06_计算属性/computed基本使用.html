@@ -27,7 +27,7 @@
                     // suggestion: '夹克'
                 }
             },
-            computed: { // 计算属性
+            computed: { // 计算属性 当计算属性依赖的内容发生变化时，才会重新执行计算
                 suggestion() { // 响应式执行，当它依赖的数据源发生变更时，才会重新执行
                     let res = '夹克'
                     if(this.temp >= 20) {

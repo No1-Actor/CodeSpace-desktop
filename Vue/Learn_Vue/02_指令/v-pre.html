@@ -13,7 +13,8 @@
 <body>
     <div id="app"></div>
     <template id="my-app">
-        <h2 v-pre>{{message}}</h2>
+        <!-- v-pre 不会被编译 -->
+        <h2 v-pre>{{message}}</h2> 
         <h2 v-cloak>{{message}}</h2>
     </template>
 
@@ -22,7 +23,9 @@
         const App = {
             template:'#my-app',
             data() {
-                message: 'hello world'
+                return {
+                    message: 'hello world'
+                }
             },
             methods: {
                 

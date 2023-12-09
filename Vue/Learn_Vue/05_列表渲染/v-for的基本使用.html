@@ -10,10 +10,13 @@
     <template id="my-app">
         <h2>歌曲列表</h2>
         <ul>
-            <li v-for="(item, index) in songs" :key="index">
-                {{index + 1}} -- {{item}}
+            <!-- 为了提高渲染效率，需要为每一个循环的元素添加一个唯一的  key -->
+            <li 
+                v-for="(item, index, key) in songs" 
+                :key="key" 
+            >
+                {{index}} -- {{key}} -- {{item}} 
                 <a href="#" @click="del(index)">X</a>
-
             </li>
         </ul>
     </template>
@@ -25,13 +28,13 @@
             template: '#my-app',
             data() {
                 return {
-                    songs: [
-                        '夜曲',
-                        '夜的第七章',
-                        '七里香',
-                        '发如雪',
-                        '珊瑚海'
-                ]
+                    songs: {
+                        first: '夜曲',
+                        second: '夜的第七章',
+                        third: '七里香',
+                        forth: '发如雪',
+                        firth: '珊瑚海'
+                }
                 }
             },
             methods: {

@@ -34,7 +34,7 @@ Vue.createApp({
         ]
       }
     },
-    
+
     computed: {
         TotalPrice(){
           let totalPrice = 0;
